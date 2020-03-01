@@ -479,6 +479,7 @@ MonoBehaviour:
   X: {fileID: 1647875693}
   Y: {fileID: 2039889526}
   Z: {fileID: 381763145}
+  cam: {fileID: 107093222}
 --- !u!4 &1633907902
 Transform:
   m_ObjectHideFlags: 0

@@ -42,10 +42,7 @@ public class ClientExample : MonoBehaviour
 
     void Update()
     {
-        X.GetComponent<Text>().text = "X: " + Input.acceleration.x.ToString("F2");
-        Y.GetComponent<Text>().text = "Y: " + Input.acceleration.y.ToString("F2");
-        Z.GetComponent<Text>().text = "Z: " + Input.acceleration.z.ToString("F2");
-        ws.Send(Input.acceleration.x.ToString("F2")+","+ Input.acceleration.y.ToString("F2"));
+ 
 
 
     }

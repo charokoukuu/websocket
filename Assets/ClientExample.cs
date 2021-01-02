@@ -14,7 +14,7 @@ public class ClientExample : MonoBehaviour
         int i = 0;
     void Start()
     {
-        ws = new WebSocket("ws://192.168.0.15:3000/");
+     
 
         ws.OnOpen += (sender, e) =>
         {

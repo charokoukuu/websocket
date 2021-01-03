@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/websocket.unity
     guid: 01353bce1009c414b9aabd4e51b23fb5
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 74b164cd6d065b44d8b3d843ef80c91a,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 174867c11529bf04fb4af4adaef4811a,
+      type: 2}

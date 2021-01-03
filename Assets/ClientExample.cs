@@ -8,15 +8,17 @@ public class ClientExample : MonoBehaviour
 {
     public GameObject X;
     public GameObject Y;
+    public GameObject hand;
+    public GameObject handstr;
     public GameObject cam;
-    float rotax, rotay;
+    float rotax, rotay,handpos;
     WebSocket ws;
 
         int i = 0;
     void Start()
     {
 
-        ws = new WebSocket("ws://192.168.0.129:3000/");
+        ws = new WebSocket("ws://192.168.0.125:3000/");
 
 
         ws.OnOpen += (sender, e) =>
@@ -48,10 +50,13 @@ public class ClientExample : MonoBehaviour
 
         rotax = (cam.transform.rotation.y * 10) + 6;
         rotay= ((cam.transform.rotation.x * 10) + 6)*-1 + 12;
+        handpos = hand.transform.localPosition.y;
+        Debug.Log(handpos);
         X.GetComponent<Text>().text = "X: " + rotax.ToString("F2");
         Y.GetComponent<Text>().text = "Y: " + rotay.ToString("F2");
+        handstr.GetComponent<Text>().text = "hand: " + handpos.ToString("F2");
 
-        ws.Send( rotax+ "," +rotay );
+        ws.Send( rotax+ "," +rotay +","+handpos);
 
 
     }

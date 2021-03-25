@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3da314b98acdacc4395f7ae7e2603cad
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - HGGothicM
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6eae72832b33cee4ca6e8252e6363189, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

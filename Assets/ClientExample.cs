@@ -10,6 +10,7 @@ public class ClientExample : MonoBehaviour
     public GameObject Y;
     public GameObject hand;
     public GameObject handstr;
+    public GameObject handicon;
     public GameObject cam;
     float rotax, rotay,handpos;
     WebSocket ws;
@@ -18,7 +19,7 @@ public class ClientExample : MonoBehaviour
     void Start()
     {
 
-        ws = new WebSocket("ws://192.168.0.125:3000/");
+        ws = new WebSocket("ws://192.168.0.114:3000/");
 
 
         ws.OnOpen += (sender, e) =>
@@ -48,9 +49,17 @@ public class ClientExample : MonoBehaviour
     void Update()
     {
 
-        rotax = (cam.transform.rotation.y * 10) + 6;
+        rotax = ((cam.transform.rotation.y * 10) + 6)*-1+12;
         rotay= ((cam.transform.rotation.x * 10) + 6)*-1 + 12;
         handpos = hand.transform.localPosition.y;
+        if (handpos > 0.2f)
+        {
+            handicon.SetActive(true);
+        }
+        else
+        {
+            handicon.SetActive(false);
+        }
         Debug.Log(handpos);
         X.GetComponent<Text>().text = "X: " + rotax.ToString("F2");
         Y.GetComponent<Text>().text = "Y: " + rotay.ToString("F2");
